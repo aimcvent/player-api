@@ -20,5 +20,9 @@ public interface PlayerService extends Service {
 
     void link(Player player, long discordId);
 
+    void updateRole(Player player, Role role);
+
+    void reload(Player player);
+
     void unload(Player player, boolean save);
 }
