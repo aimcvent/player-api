@@ -1,6 +1,7 @@
 package fr.aimcvent.player.api;
 
 import fr.aimcvent.kernel.api.service.Service;
+import fr.aimcvent.kernel.api.translation.Translation;
 
 import java.util.List;
 import java.util.UUID;
@@ -21,6 +22,8 @@ public interface PlayerService extends Service {
     void link(Player player, long discordId);
 
     void updateRole(Player player, Role role);
+
+    void updateTranslation(Player player, Translation translation);
 
     void reload(Player player);
 
