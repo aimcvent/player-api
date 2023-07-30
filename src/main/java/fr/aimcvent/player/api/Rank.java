@@ -2,7 +2,7 @@ package fr.aimcvent.player.api;
 
 import java.util.UUID;
 
-public interface Role {
+public interface Rank {
     UUID id();
 
     String name();

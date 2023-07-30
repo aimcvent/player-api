@@ -11,7 +11,9 @@ public interface Player {
 
     Long discordId();
 
-    Role role();
+    Rank rank();
 
     Translation translation();
+
+    Tags tags();
 }

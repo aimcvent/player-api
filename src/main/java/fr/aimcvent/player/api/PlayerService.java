@@ -13,15 +13,15 @@ public interface PlayerService extends Service {
 
     Player byDiscordId(long id);
 
-    Role defaultRole();
+    Rank defaultRank();
 
-    List<Role> roles();
+    List<Rank> ranks();
 
     void save(Player player);
 
     void link(Player player, long discordId);
 
-    void updateRole(Player player, Role role);
+    void updateRank(Player player, Rank rank);
 
     void updateTranslation(Player player, Translation translation);
 
