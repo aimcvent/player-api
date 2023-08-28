@@ -9,7 +9,11 @@ public interface Player {
 
     UUID playerId();
 
+    String name();
+
     Long discordId();
+
+    String discordName();
 
     Rank rank();
 

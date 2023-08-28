@@ -4,14 +4,23 @@ import fr.aimcvent.kernel.api.service.Service;
 import fr.aimcvent.kernel.api.translation.Translation;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface PlayerService extends Service {
     Player of(UUID id);
 
-    Player byPlayerId(UUID id);
+    Player load(UUID id, String name);
 
-    Player byDiscordId(long id);
+    Player load(long id, String name);
+
+    Optional<Player> byId(UUID id);
+
+    Optional<Player> byName(String name);
+
+    Optional<Player> byId(long id);
+
+    Optional<Player> byDiscordName(String name);
 
     Rank defaultRank();
 
@@ -19,7 +28,7 @@ public interface PlayerService extends Service {
 
     void save(Player player);
 
-    void link(Player player, long discordId);
+    void link(Player player, long discordId, String discordName);
 
     void updateRank(Player player, Rank rank);
 
@@ -28,4 +37,8 @@ public interface PlayerService extends Service {
     void reload(Player player);
 
     void unload(Player player, boolean save);
+
+    boolean isLoaded(UUID id);
+
+    boolean isLoaded(long id);
 }
