@@ -1,4 +1,4 @@
-package fr.aimcvent.player.api;
+package fr.aimcvent.player.api.rank;
 
 import java.util.UUID;
 
@@ -9,7 +9,7 @@ public interface Rank {
 
     boolean isDefault();
 
-    int power();
+    Permissions permissions();
 
     String bukkitColor();
 

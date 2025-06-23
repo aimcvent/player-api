@@ -2,8 +2,8 @@ package fr.aimcvent.player.api;
 
 import fr.aimcvent.kernel.api.service.Service;
 import fr.aimcvent.kernel.api.translation.Translation;
+import fr.aimcvent.player.api.rank.Ranks;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -22,15 +22,11 @@ public interface PlayerService extends Service {
 
     Optional<Player> byDiscordName(String name);
 
-    Rank defaultRank();
-
-    List<Rank> ranks();
+    Ranks ranks();
 
     void save(Player player);
 
     void link(Player player, long discordId, String discordName);
-
-    void updateRank(Player player, Rank rank);
 
     void updateTranslation(Player player, Translation translation);
 
@@ -41,4 +37,6 @@ public interface PlayerService extends Service {
     boolean isLoaded(UUID id);
 
     boolean isLoaded(long id);
+
+    boolean hasPermission(Player player, String permission);
 }
