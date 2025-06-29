@@ -1,6 +1,7 @@
 package fr.aimcvent.player.api;
 
 import fr.aimcvent.kernel.api.translation.Translation;
+import fr.aimcvent.player.api.rank.Permission;
 import fr.aimcvent.player.api.rank.Rank;
 
 import java.util.UUID;
@@ -23,4 +24,6 @@ public interface Player {
     Tags tags();
 
     boolean hasPermission(String permission);
+
+    boolean hasPermission(Permission permission);
 }
