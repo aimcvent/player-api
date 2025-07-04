@@ -3,7 +3,7 @@ package fr.aimcvent.player.api.event;
 import fr.aimcvent.player.api.Player;
 
 public class PlayerCheckPermissionEvent extends PlayerEvent {
-    public final String permission;
+    private final String permission;
     private boolean result;
     public PlayerCheckPermissionEvent(Player player, String permission, boolean result) {
         super(player);
