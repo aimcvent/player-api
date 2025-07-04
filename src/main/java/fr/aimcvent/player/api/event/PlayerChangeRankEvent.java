@@ -1,7 +1,7 @@
 package fr.aimcvent.player.api.event;
 
 import fr.aimcvent.player.api.Player;
-import fr.aimcvent.player.api.Rank;
+import fr.aimcvent.player.api.rank.Rank;
 
 public class PlayerChangeRankEvent extends PlayerEvent {
     private final Rank previous;
